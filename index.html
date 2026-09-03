@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#b9e7ff" />
+  <title>Life's Big Adventure</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icon.jpg" />
+  <link rel="icon" href="assets/icon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="title-screen" class="screen active">
+    <div class="logo-row">
+      <img src="assets/icon.jpg" alt="" onerror="this.style.visibility='hidden'" />
+      <h1>Life's Big<br>Adventure</h1>
+    </div>
+    <img class="hero" src="assets/hero.jpg" alt="Toy cars on a winding rainbow road" onerror="this.style.display='none'" />
+    <p class="tag">Flick the wheel. Go to uni or get a job. Grow a family. Pay off loans — or skip them. Richest life wins.</p>
+    <div class="row">
+      <button class="btn" id="btn-new">Let’s play</button>
+      <button class="btn ghost" id="btn-continue" hidden>Continue</button>
+    </div>
+    <button class="btn ghost small" id="btn-how">How to play</button>
+  </div>
+
+  <div id="setup-screen" class="screen">
+    <h1>Who’s playing?</h1>
+    <p class="tag">Pass one phone around. 2–4 players.</p>
+    <div class="card" id="setup-players"></div>
+    <div class="row">
+      <button class="btn ghost" id="btn-add">+ Player</button>
+      <button class="btn" id="btn-start">Start the adventure</button>
+    </div>
+  </div>
+
+  <div id="pass-screen" class="screen">
+    <p class="tag">Pass the phone to</p>
+    <h1 id="pass-name">Lily</h1>
+    <div class="big-car" id="pass-car"></div>
+    <p class="tag" id="pass-job"></p>
+    <button class="btn" id="btn-pass-go">I’m ready — spin!</button>
+  </div>
+
+  <div id="game-screen" class="screen">
+    <div class="hud" id="hud"></div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Start</span><span>Uni / Job</span><span>Family</span><span>Home</span><span>Retire</span></div>
+      <div class="track" id="track"></div>
+    </div>
+    <div class="journey" id="journey"></div>
+    <div class="dock">
+      <div class="turn-banner" id="turn-banner"></div>
+      <div class="spin-wrap" id="spin-wrap">
+        <div class="wheel-box" id="wheel-box">
+          <div class="pointer"></div>
+          <div class="wheel" id="wheel">
+            <div class="wheel-nums" id="wheel-nums"></div>
+            <div class="hub" id="hub">FLICK!</div>
+          </div>
+        </div>
+        <div class="hint" id="spin-hint">Flick the wheel with your finger</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="finish-screen" class="screen">
+    <h1>That’s life!</h1>
+    <p class="tag" id="finish-sub">Time to count the fortune.</p>
+    <div class="podium card" id="podium"></div>
+    <button class="btn" id="btn-again">Play again</button>
+  </div>
+
+  <div class="modal-back" id="modal-back">
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
