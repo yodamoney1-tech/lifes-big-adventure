@@ -1,0 +1,12 @@
+{
+  "name": "Life's Big Adventure",
+  "short_name": "Life Adventure",
+  "description": "A family life-path board game for phones. Flick the wheel, pick a career, grow a family.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#b9e7ff",
+  "theme_color": "#e23b5a",
+  "icons": [
+    { "src": "assets/icon.jpg", "sizes": "512x512", "type": "image/jpeg", "purpose": "any" }
+  ]
+}
